@@ -1,0 +1,7 @@
+data/raw/*.csv
+.venv/
+__pycache__/
+.env
+olist_dbt/target/
+olist_dbt/logs/
+olist_dbt/dbt_packages/

@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: olist_raw
+    description: Raw Olist tables loaded by ingestion/load_raw.py (all columns are text).
+    schema: raw
+    tables:
+      - name: orders
+      - name: customers
+      - name: order_items
+      - name: order_payments
+      - name: order_reviews
+      - name: products
+      - name: sellers
+      - name: product_category_name_translation

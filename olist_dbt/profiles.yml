@@ -1,0 +1,13 @@
+# Works locally (defaults) and inside Airflow's container (env vars set in docker-compose.yml).
+olist_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('WAREHOUSE_HOST', 'localhost') }}"
+      port: "{{ env_var('WAREHOUSE_PORT', '5433') | as_number }}"
+      user: de_user
+      pass: de_pass
+      dbname: olist
+      schema: staging
+      threads: 4
